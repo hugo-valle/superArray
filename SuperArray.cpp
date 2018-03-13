@@ -28,3 +28,41 @@ SuperArray::~SuperArray()
 {
 	delete[] arr;
 }
+	
+/*! Convert array content to string
+ * @param: obj SuperArray class
+ * @return: String version of the array
+ */
+string arrayToString(const SuperArray& s)
+{
+    stringstream ss;
+
+    // TODO: Change 5 for s.length()
+    for(int i=0; i < 5; i++)
+    {
+        cout << s.arr[i]<< " i "<< i << endl;
+        ss << s.arr[i] << " ";
+    }
+    string s1 = ss.str(); //build a string from the stream of chars
+    cout<< s1 << endl;
+    return s1;
+}
+	
+/*!
+ * Overload [ ] operator. Translates user's index to the real index
+ * @param: index User's index
+ * @return Real index
+ */
+int &SuperArray::operator[](const int index)
+{
+    int realIndex; 
+    if(lowIndex == 0)
+    {
+        realIndex = index;
+    }
+    else
+    {
+        realIndex = index - lowIndex;
+    }
+
+}
