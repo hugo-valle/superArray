@@ -52,6 +52,6 @@ TEST_CASE("3) Test Constructor with negative index")
     }
     SECTION("Test #3: Constructor")
     {
-        REQUIRE(arrayToString(sa) == "-30 -29 -28 -27 -26");
+        REQUIRE(arrayToString(sa) == "-30 -29 -28 -27 -29");
     }
 }
